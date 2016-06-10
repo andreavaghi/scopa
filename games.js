@@ -13,7 +13,6 @@ if (Meteor.isServer) {
 }
 
 if (Meteor.isClient) {
-  Meteor.subscribe('games');
   Meteor.subscribe('users');
 }
 
