@@ -1,0 +1,13 @@
+<template name='play'>
+  {{> signupLogin}}
+  {{#if currentUser}}
+    {{> status}}
+  {{/if}}
+</template>
+
+<template name='status'>
+  <p>
+    <a href="/">&larr;Home</a>
+  </p>
+  <h2>Game between you and {{otherPlayer.username}} {{#if inProgress}}{{#if yourTurn}} (Your Turn) {{/if}}{{/if}}</h2>
+</template>
