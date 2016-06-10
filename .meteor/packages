@@ -19,3 +19,4 @@ iron:router
 accounts-password
 standard-minifier-css
 standard-minifier-js
+momentjs:moment
