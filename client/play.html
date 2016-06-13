@@ -1,5 +1,7 @@
 <template name="play">
-  {{> signupLogin}}
+  <div id="login">
+    {{> signupLogin}}
+  </div>
   {{#if currentUser}}
     {{> status}}
     {{#unless inProgress}}
