@@ -10,9 +10,9 @@ Template.gameList.helpers({
       game.otherPlayer = Meteor.users.findOne(otherId(game)).username;
       game.finished = moment(game.finished).fromNow();
 
-      if (game.winner === 'tie') game.message = 'tied';
-      else if (game.winner === Meteor.userId()) game.message = 'won';
-      else game.message = 'lost';
+      if (game.winner === 'tie') game.message = 'pareggiata';
+      else if (game.winner === Meteor.userId()) game.message = 'vinta';
+      else game.message = 'persa';
       return game;
     });
   },

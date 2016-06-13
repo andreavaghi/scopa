@@ -21,3 +21,5 @@ standard-minifier-css
 standard-minifier-js
 momentjs:moment
 rzymek:moment-locale-it
+twbs:bootstrap
+meteortoys:allthings

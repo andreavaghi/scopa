@@ -1,14 +1,6 @@
 Games = new Meteor.Collection('games');
 
 if (Meteor.isServer) {
-  Meteor.startup(function() {
-    if (Meteor.users.find({ username: 'computer' }).count() === 0) {
-      Meteor.users.insert({
-        username: 'computer'
-      });
-    }
-  });
-
   Meteor.publish('games', function() {
     return Games.find({ currentTurn: this.userId });
   });
@@ -53,12 +45,6 @@ Meteor.methods({
       }
     }
     Games.update(gameId, game);
-
-    if (!this.isSimutaion && game.inProgress && Meteor.users.findOne(game.currentTurn[0]).username === 'computer') {
-      Meteor.setTimeout(function() {
-        takeComputerTurn(gameId);
-      }, 1000);
-    }
   }
 });
 
