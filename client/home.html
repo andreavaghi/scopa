@@ -9,13 +9,13 @@
 
 <template name="gameList">
   <div class="column">
-    <h1>Games</h1>
+    <h1>Partite</h1>
     <ul>
       {{#each games}}
         {{> gameItem}}
       {{/each}}
     </ul>
-    <h1>Completed Games</h1>
+    <h1>Partite terminate</h1>
     <ul>
       {{#each completedGames}}
         {{> gameItem}}
@@ -26,12 +26,12 @@
 
 <template name="gameItem">
   <li>
-  <a href="/game/{{_id}}">Game with {{otherPlayer}}
+  <a href="/game/{{_id}}">Partita con {{otherPlayer}}
     <span>
       {{#if inProgress}}
-        started {{started}}
+        iniziata {{started}}
       {{else}}
-        finished {{finished}} ({{message}})
+        finita {{finished}} ({{message}})
       {{/if}}
     </span>
   </a>
@@ -40,8 +40,8 @@
 
 <template name="userList">
   <div class="column">
-    <h1>Users</h1>
-    <p>Choose anothe user to start a game with them :</p>
+    <h1>Utenti</h1>
+    <p>Scegli un utente con cui iniziare una partita:</p>
     <ul>
       {{#each users}}
         {{> userItem}}

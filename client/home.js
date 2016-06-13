@@ -2,6 +2,8 @@ function otherId(game) {
   return game.currentTurn[game.currentTurn[0] === Meteor.userId() ? 1 : 0];
 }
 
+moment.locale('it');
+
 Template.gameList.helpers({
   completedGames: function() {
     return Games.find({ inProgress: false }).map(function(game) {

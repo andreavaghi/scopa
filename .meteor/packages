@@ -20,3 +20,4 @@ accounts-password
 standard-minifier-css
 standard-minifier-js
 momentjs:moment
+rzymek:moment-locale-it
