@@ -1,0 +1,47 @@
+<template name="navbar">
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>Menu
+        </button>
+        <a class="navbar-brand" href="#">Scopa</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign Up <span class="caret"></span></a>
+            <div class="dropdown-menu">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="su-email" id="su-email" placeholder="Email address">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="su-username" id="su-username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="su-password" id="su-password" placeholder="Password">
+                </div>
+                <button class="btn btn-primary">Sign Up</button>
+              </form>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log In <span class="caret"></span></a>
+            <div class="dropdown-menu">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="li-username" id="li-username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="li-password" id="li-password" placeholder="Password">
+                </div>
+                <button class="btn btn-primary">Log In</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
