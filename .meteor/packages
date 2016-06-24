@@ -15,8 +15,10 @@ tracker                 # Meteor's client-side reactive programming library
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-iron:router
+kadira:flow-router
+kadira:blaze-layout
 accounts-password
+accounts-ui
 standard-minifier-css
 standard-minifier-js
 momentjs:moment

@@ -1,9 +1,27 @@
-Router.configure({
+import { FlowRouter } from 'meteor/kadira:flow-router';
+import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+
+import '../../ui/layouts/HomeLayout.js';
+
+FlowRouter.route('/', {
+  name: 'home',
+  action() {
+    BlazeLayout.render('HomeLayout');
+  }
+});
+
+FlowRouter.route('/game/:_id', {
+  name: 'game',
+  action() {
+    BlazeLayout.render('MainLayout');
+  }
+});
+
+FlowRouter.configure({
   layoutTemplate: 'layout'
 });
 
-Router.map(function() {
-  this.route('home', { path: '/' });
+FlowRouter.map(function() {
   this.route('play', {
     path: '/game/:_id',
     data: function() {

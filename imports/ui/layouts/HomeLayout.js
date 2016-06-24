@@ -1,3 +1,8 @@
+import './HomeLayout.html';
+
+import { Template } from 'meteor/templating';
+import { Games } from '../../api/games/games.js';
+
 function otherId(game) {
   return game.currentTurn[game.currentTurn[0] === Meteor.userId() ? 1 : 0];
 }
