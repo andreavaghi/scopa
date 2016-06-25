@@ -1,12 +1,13 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
-import '../../ui/layouts/HomeLayout.js';
+import '../../ui/layouts/app-body.js';
+import '../../ui/pages/home.js';
 
 FlowRouter.route('/', {
   name: 'home',
   action() {
-    BlazeLayout.render('HomeLayout');
+    BlazeLayout.render('AppBody', { main: 'HomeLayout' });
   }
 });
 
@@ -17,11 +18,7 @@ FlowRouter.route('/game/:_id', {
   }
 });
 
-FlowRouter.configure({
-  layoutTemplate: 'layout'
-});
-
-FlowRouter.map(function() {
+/* FlowRouter.map(function() {
   this.route('play', {
     path: '/game/:_id',
     data: function() {
@@ -48,4 +45,4 @@ FlowRouter.map(function() {
       return {};
     }
   });
-});
+}); */
