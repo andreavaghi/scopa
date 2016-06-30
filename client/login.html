@@ -1,32 +1,3 @@
-<template name="signup">
-  <form>
-    <h1>Sign Up</h1>
-    <div class="form-group">
-      <input type="text" class="form-control" name="su-email" id="su-email" placeholder="Email address">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" name="su-username" id="su-username" placeholder="Username">
-    </div>
-    <div class="form-group">
-      <input type="password" class="form-control" name="su-password" id="su-password" placeholder="Password">
-    </div>
-    <button class="btn btn-primary">Sign Up</button>
-  </form>
-</template>
-
-<template name="login">
-  <form>
-    <h1>Log In</h1>
-    <div class="form-group">
-      <input type="text" class="form-control" name="li-username" id="li-username" placeholder="Username">
-    </div>
-    <div class="form-group">
-      <input type="password" class="form-control" name="li-password" id="li-password" placeholder="Password">
-    </div>
-    <button class="btn btn-primary">Log In</button>
-  </form>
-</template>
-
 <template name="logout">
   <form>
     ({{currentUser.username}})
@@ -41,8 +12,8 @@
     {{#if currentUser}}
       {{> logout}}
     {{else}}
-      {{> signup}}
-      {{> login}}
+      {{#linkTo '/signup/'}}Signup{{/linkTo}}
+      {{#linkTo '/login/'}}Login{{/linkTo}}
     {{/if}}
   {{/if}}
 </template>

@@ -3,6 +3,8 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
 import '../../ui/layouts/app-body.js';
 import '../../ui/pages/home.js';
+import '../../ui/pages/signup.js';
+import '../../ui/pages/login.js';
 
 FlowRouter.route('/', {
   name: 'home',
@@ -11,10 +13,24 @@ FlowRouter.route('/', {
   }
 });
 
+FlowRouter.route('/signup', {
+  name: 'signup',
+  action() {
+    BlazeLayout.render('AppBody', { main: 'SignupLayout' });
+  }
+});
+
+FlowRouter.route('/login', {
+  name: 'login',
+  action() {
+    BlazeLayout.render('AppBody', { main: 'LoginLayout' });
+  }
+});
+
 FlowRouter.route('/game/:_id', {
   name: 'game',
   action() {
-    BlazeLayout.render('MainLayout');
+    BlazeLayout.render('AppBody', { main: 'MainLayout' });
   }
 });
 

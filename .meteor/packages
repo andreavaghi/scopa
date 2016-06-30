@@ -17,6 +17,7 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 kadira:flow-router
 kadira:blaze-layout
+arillo:flow-router-helpers
 accounts-password
 accounts-ui
 standard-minifier-css
