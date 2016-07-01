@@ -1,0 +1,17 @@
+@import './utils.scss';
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; // for some Androids
+}
+
+button,
+html,
+input,
+select,
+textarea {
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
