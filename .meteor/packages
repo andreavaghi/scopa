@@ -22,6 +22,7 @@ accounts-password
 accounts-ui
 standard-minifier-css
 standard-minifier-js
+fourseven:scss
 momentjs:moment
 rzymek:moment-locale-it
 twbs:bootstrap

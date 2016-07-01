@@ -12,8 +12,12 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          {{#if currentUser}}
+          <li><a class="js-logout btn-secondary">Logout</a></li>
+          {{else}}
           <li><a href="{{pathFor 'signup'}}">Sign Up</a></li>
           <li><a href="{{pathFor 'login'}}">Log In</a></li>
+          {{/if}}
         </ul>
       </div>
     </div>
