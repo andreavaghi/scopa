@@ -5,6 +5,7 @@ import '../../ui/layouts/app-body.js';
 import '../../ui/pages/home.js';
 import '../../ui/pages/signup.js';
 import '../../ui/pages/login.js';
+import '../../ui/pages/play.js';
 
 FlowRouter.route('/', {
   name: 'home',
@@ -30,7 +31,7 @@ FlowRouter.route('/login', {
 FlowRouter.route('/game/:_id', {
   name: 'game',
   action() {
-    BlazeLayout.render('AppBody', { main: 'MainLayout' });
+    BlazeLayout.render('AppBody', { main: 'PlayLayout' });
   }
 });
 
