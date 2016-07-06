@@ -1,11 +1,20 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+import { Accounts } from 'meteor/accounts-base';
 
 import '../../ui/layouts/app-body.js';
 import '../../ui/pages/home.js';
 import '../../ui/pages/signup.js';
 import '../../ui/pages/login.js';
 import '../../ui/pages/play.js';
+
+Accounts.onLogin(function() {
+  FlowRouter.go('home');
+});
+
+Accounts.onLogout(function() {
+  FlowRouter.go('home');
+});
 
 FlowRouter.route('/', {
   name: 'home',

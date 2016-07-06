@@ -36,8 +36,6 @@ Template.userList.helpers({
     var myid = Meteor.userId(),
       cantPlayAgainst = [myid];
 
-    console.log(Meteor.users.find().count());
-
     Games.find({ inProgress: true }).forEach(function(game) {
       cantPlayAgainst.push(otherId(game));
     });
